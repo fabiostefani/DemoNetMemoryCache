@@ -24,5 +24,8 @@ public class ProdutoMapping : IEntityTypeConfiguration<Produto>
             .IsRequired()
             .HasColumnName("Preco")
             .HasPrecision(15, 2);
+        builder.HasOne(x => x.Categoria)
+        .WithMany()
+        .HasForeignKey(x => x.CategoriaId);
     }
 }

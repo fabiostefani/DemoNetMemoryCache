@@ -1,6 +1,6 @@
 using DemoNetMemoryCache.Models;
 
-namespace DemoNetMemoryCache.Repositorios;
+namespace DemoNetMemoryCache.Repositorios.Produtos;
 public interface IProdutoRepositorio
 {
     Task<bool> Adicionar(Produto produto);

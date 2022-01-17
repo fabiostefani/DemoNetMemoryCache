@@ -1,6 +1,6 @@
 using DemoNetMemoryCache.Controllers.Models;
 using DemoNetMemoryCache.Models;
-using DemoNetMemoryCache.Repositorios;
+using DemoNetMemoryCache.Repositorios.Produtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DemoNetMemoryCache.Controllers;

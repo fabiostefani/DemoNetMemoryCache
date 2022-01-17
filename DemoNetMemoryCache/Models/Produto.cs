@@ -16,4 +16,6 @@ public class Produto
     public string Nome { get; private set; }
     public string Departamento { get; private set; }
     public decimal Preco { get; private set; }
+    public Guid? CategoriaId { get; set; }
+    public Categoria Categoria { get; set; }
 }

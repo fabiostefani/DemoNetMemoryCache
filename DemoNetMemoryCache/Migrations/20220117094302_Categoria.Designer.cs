@@ -3,6 +3,7 @@ using System;
 using DemoNetMemoryCache.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DemoNetMemoryCache.Migrations
 {
     [DbContext(typeof(MemoryCacheContext))]
-    partial class MemoryCacheContextModelSnapshot : ModelSnapshot
+    [Migration("20220117094302_Categoria")]
+    partial class Categoria
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

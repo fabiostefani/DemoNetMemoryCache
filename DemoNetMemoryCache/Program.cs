@@ -1,5 +1,8 @@
 using DemoNetMemoryCache.Data;
 using DemoNetMemoryCache.Repositorios;
+using DemoNetMemoryCache.Repositorios.Caching;
+using DemoNetMemoryCache.Repositorios.Categorias;
+using DemoNetMemoryCache.Repositorios.Produtos;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +18,10 @@ builder.Services.AddDbContext<MemoryCacheContext>(options =>
                     builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<MemoryCacheContext>();
 builder.Services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
+builder.Services.AddScoped<ICategoriaRepositorio, CategoriaRepositorio>();
 builder.Services.AddMemoryCache();
+builder.Services.AddScoped<CategoriaRepositorioQuery>();
+builder.Services.AddScoped<ICategoriaRepositorioQuery, CategoriaCachingDecorator<CategoriaRepositorioQuery>>();
 
 var app = builder.Build();
 

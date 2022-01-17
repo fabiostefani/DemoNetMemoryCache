@@ -3,7 +3,7 @@ using DemoNetMemoryCache.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace DemoNetMemoryCache.Repositorios;
+namespace DemoNetMemoryCache.Repositorios.Produtos;
 public class ProdutoRepositorio : IProdutoRepositorio
 {
     const string KeyMemoryCache = "Produtos";
